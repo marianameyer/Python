@@ -12,8 +12,28 @@ frase = frase.replace('á', 'a')
 frase = frase.replace('ã', 'a')
 frase = frase.replace('é', 'e')
 frase = frase.replace('ó', 'o')
-print(frase)
 
-# Laço
-for c in range(len(frase)+1, 0, -1):
-    print(c)
+# Lista e Contador
+lista = []
+count = 0
+
+# Laço for
+for letra in frase:
+    lista.append(letra)
+
+# Definindo tamanho da lista e criando uma lista inversa
+fim = len(lista)
+lista_reversa = lista[::-1]
+
+# Analisando se os itens da lista e da lista inversa são iguais
+for i in range(0, fim):
+    if lista[i] == lista_reversa[i]:
+        count += 1
+    else:
+        pass
+
+# Verificação se a frase digitada é ou não um palíndromo
+if count == fim:
+    print('A frase digitada É um palíndromo!')
+else:
+    print('A frase digitada NÃO é um palíndromo...')
